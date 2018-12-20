@@ -1,2 +1,4 @@
 /.vscode
 /etc
+/.idea
+/lib/__pycache__

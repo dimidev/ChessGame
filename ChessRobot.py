@@ -4,7 +4,7 @@ import json
 import pickle
 from lib import sunfish as ai
 from lib.board import Board
-from lib import recognition
+# from lib import recognition
 
 arduino = Board('COM5', 9600) # initialize arduino board
 
@@ -70,21 +70,25 @@ def main():
 
         pos = pos.move(move)
 
-def camera_test():
-    recognition.parse('1')
 
-print("Menu Options:")
-print("-------------")
-print("1 - Start Game")
-print("2 - Camera Test")
-print("")
-
-user_input = int(input("What do you want? "))
-
-while user_input not in [1,2]:
-    user_input = int(input("What do you want? "))
-
-if user_input == 1:
+if __name__ == '__main__':
     main()
-elif user_input == 2:
-    camera_test()
+
+# def camera_test():
+#     recognition.parse('1')
+
+# print("Menu Options:")
+# print("-------------")
+# print("1 - Start Game")
+# print("2 - Camera Test")
+# print("")
+
+# user_input = int(input("What do you want? "))
+#
+# while user_input not in [1,2]:
+#     user_input = int(input("What do you want? "))
+
+# if user_input == 1:
+#     main()
+# elif user_input == 2:
+#     camera_test()
